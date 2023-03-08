@@ -12,7 +12,7 @@ Note: You might need to modify CSP (Content Security Policy) related to frame to
 
 ## Default Card View
 
-![currently loaded work item information picture](https://enateltd.github.io/Custom-Card-Integration/iframe/docs/default.jpg)
+![currently loaded work item information picture](docs/default.jpg)
 
 ## Get Work item information
 
