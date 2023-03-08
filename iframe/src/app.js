@@ -1,6 +1,7 @@
 (() => {
-    
-    const enateAppUrl = new URL("<enate application instance url>");
+
+    /// { href: string, origin: string, url: URL }
+    const topWindowInfo = { href: null, origin: null, url: null };
 
     // send message to top window
     const callbackMap = {};
@@ -8,7 +9,7 @@
         const token = Date.now() + " - " + performance.now();
         const src = location.href.toLowerCase()
         callbackMap[token] = fn || (() => { });
-        top.postMessage({ src, token, data }, enateAppUrl.origin);
+        top.postMessage({ src, token, data }, topWindowInfo.origin);
     };
 
     // message listener from other window to this
@@ -17,6 +18,14 @@
         if (typeof fn === "function") {
             delete callbackMap[e.data.token];
             fn(e.data.data);
+        } else {
+            const d = e.data?.data || {};
+            if (d.type === 'topWindowInfo') {
+                Object.assign(topWindowInfo, d);
+                topWindowInfo.url = new URL(topWindowInfo.href);
+                topWindowInfo.origin = topWindowInfo.url.origin;
+                Object.freeze(topWindowInfo);
+            }
         }
     });
 
