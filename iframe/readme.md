@@ -1,27 +1,30 @@
-# Third Party WebApp integration by Iframe with Custom Card
+# Third Party WebApp integration by Iframe with an Enate Advanced Custom Card
 
-## How to create a Advance Custom Card
+## Create an Advanced Custom Card
 
-Create work manager advance custom card ([see the documentation here](https://docs.enate.net/enate-help/builder/builder-2021.1/custom-data-and-custom-card-configuration/super-flexible-cards))
+Go to Enate Builder and in the Custom Card page, click to create a new Custom Card. Add a name to the card and a description if you want and then click the ‘Advanced’ toggle [(see here for more information about creating Advanced Custom Cards in Enate)](https://docs.enate.net/enate-help/builder/builder-2021.1/custom-data-and-custom-card-configuration/super-flexible-cards).
 
-## Import Sample Card
+## Add Sample Card Code
 
-You can just import "iframe-sample-card.en8Card" in Builder/Card section and play with sample.
+Copy and add the sample card code from "iframe-sample-card.en8Card" into the relevant sections. You can also just import "iframe-sample-card.en8Card" in Builder/Card section and play with sample.  
 
-Note: You might need to modify CSP (Content Security Policy) related to frame to load this sample card in your instance.
+Note: You might need to modify the frame content in your CSP (Content Security Policy) in order to load this sample card in your instance (*For this card you modify "frame-src" part and add "https://*.github.io"*).
 
-## Default Card View
+## Work Manager Default Card View
+
+At runtime in Work Manager, the Custom Card will look like this: 
 
 ![currently loaded work item information picture](https://enateltd.github.io/Custom-Card-Integration/iframe/docs/default.jpg)
 
 ## Get Work item information
 
-It will give you Information of currently loaded work item.
+This provides information about the currently loaded work item.
+
 ![currently loaded work item information picture](https://enateltd.github.io/Custom-Card-Integration/iframe/docs/pkt-info.jpg)
 
-## Update Work item Title
+## Update Work item Title 
 
-It will change title property of currently loaded work item.
+This changes the title property of currently loaded work item.
 
 *Before*
 ![before currently loaded work item title picture](https://enateltd.github.io/Custom-Card-Integration/iframe/docs/pkt-title0.jpg)
@@ -31,21 +34,24 @@ It will change title property of currently loaded work item.
 
 ## Add Validation
 
-It will add a validation which will stop currently loaded work item to be submitted.
+This adds validation to prevent the currently loaded work item from being submitted.
+
 ![currently loaded work item validation message picture](https://enateltd.github.io/Custom-Card-Integration/iframe/docs/vld-added.jpg)
 
 ## Remove Validation
 
-It will remove a validation which was stopping currently loaded work item to be submitted.
+This removes the validation that was preventing the currently loaded work item from being submitted.
+
 ![currently loaded work item validation message picture](https://enateltd.github.io/Custom-Card-Integration/iframe/docs/vld-removed.jpg)
 
 
 ## Get Logged-In User information by Calling Enate API
 
-It will give you information of currently logged-in user.
+This provides information about the currently logged-in user.
+
 ![currently logged-in user information picture](https://enateltd.github.io/Custom-Card-Integration/iframe/docs/user-info.jpg)
 
 
-### Note
+### 1. Note
 
-This iframe example hosted at [https://enateltd.github.io/Custom-Card-Integration/iframe/index.html](https://enateltd.github.io/Custom-Card-Integration/iframe/index.html)
+An example of this iframe can be found here: [https://enateltd.github.io/Custom-Card-Integration/iframe/index.html](https://enateltd.github.io/Custom-Card-Integration/iframe/index.html).
