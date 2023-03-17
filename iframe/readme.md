@@ -8,7 +8,7 @@ Go to Enate Builder and in the Custom Card page, click to create a new Custom Ca
 
 Copy and add the sample card code from "iframe-sample-card.en8Card" into the relevant sections. You can also just import "iframe-sample-card.en8Card" in Builder/Card section and play with sample.  
 
-Note: You might need to modify the frame content in your CSP (Content Security Policy) in order to load this sample card in your instance (*For this card you modify "frame-src" part and add "https://*.github.io"*).
+Note: You might need to modify the frame content in your CSP (Content Security Policy) in order to load this sample card in your instance *(For this card you modify "frame-src" part and add "https://*.github.io").
 
 ## Work Manager Default Card View
 
